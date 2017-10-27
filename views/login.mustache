@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+    <link rel="stylesheet" href="app.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Mumbler</title>
+  </head>
+  <body>
+      <div class="w3-sidebar w3-bar-block w3-dark-grey w3-animate-left" style="display:none" id="mySidebar">
+  <button class="w3-bar-item w3-button w3-large"
+  onclick="w3_close()">Close &times;</button>
+  <a href="http://0.0.0.0:3000/" class="w3-bar-item w3-button">Home</a>
+  <a href="http://0.0.0.0:3000/login" class="w3-bar-item w3-button">Login</a>
+  <a href="http://0.0.0.0:3000/register" class="w3-bar-item w3-button">Register</a>
+</div>
+
+<div>
+  <button class="w3-button w3-xxlarge" onclick="w3_open()">&#9776;</button>
+  <div class="w3-container w3-center">
+    <div class="login">
+  <div class="login-screen">
+    <div class="app-title">
+      <h1>Login</h1>
+    </div>
+    <form action="/login" method="post">
+    <div class="login-form">
+      <div class="control-group">
+      <input type="text" class="login-field" name="username" placeholder="username" id="login-name">
+      <label class="login-field-icon fui-user" for="login-name"></label>
+      </div>
+
+      <div class="control-group">
+      <input type="password" class="login-field" name="password" placeholder="password" id="login-pass">
+      <label class="login-field-icon fui-lock" for="login-pass"></label>
+      </div>
+
+      <input class="btn btn-primary btn-large btn-block" type="submit" value="login"/>
+    </div>
+    </form>
+  </div>
+</div>
+  </div>
+</div>
+
+<div class="error">
+<p>{{error}}</p>
+</div>
+
+<script>
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+  </body>
+</html>

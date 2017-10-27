@@ -1,0 +1,38 @@
+body{
+ background-color: #1abc9c;
+ box-sizing: border-box;
+ font-family: Courier;
+ color: white;
+}
+#signOut{
+  float: right;
+  margin: 2px;
+}
+.title{
+  margin: 3px 4px;
+}
+#postbtn{
+  margin-left: 30%;
+}
+
+#post{
+  margin: 0 auto;
+  width: 40%;
+}
+.container{
+  background-color: #ecf0f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 15px;
+}
+h4{
+  color: #292929;
+  font-weight: bold;
+}
+
+.card{
+  border-radius: 5px;
+  background-color: white;
+  margin: 5px;
+  padding: 2%;
+}
