@@ -5,25 +5,89 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="https://raw.githubusercontent.com/cr1stian/Nodeblog/master/public/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/cr1stian/Nodeblog/master/public/favicon.ico" type="image/x-icon"/>
     <title>What's on Your Mind?</title>
   </head>
   <body>
-<div>
+
+    <div class="header">
+      <h1>Mumbler!</h1>
+      <br>
+    </div>
 
 
 
+  <h3 class="title">Hey <span style="color:#7f8c8d; font-size:32px; padding-left:5px">{{user}}</span>, got a <a style="font-size:36px" href="http://0.0.0.0:3000/post">Rant?</a></h3>
+<br>
+
+<div class="flex">
+
+{{#content}}
+
+<!--Post-->
+  <div class="container" >
+
+  <div class='content' >
+    <h4>{{postedby}}</h4>
+    <br>
+    <p style="color: #292929">{{body}}</p>
+    <p style="color: #bdc3c7" >{{createdAt}}</p>
+
+<div style="color: #292929">
+  <form  class="likes" method="post" action="/likes">
+
+
+    <input type="image" name="id" src="https://image.flaticon.com/icons/png/128/149/149762.png" style="width:20px; height:20px; display:inline" border="0" alt="Submit" value="{{id}}" ></input>
+
+    {{likes}} <a class="likeby" id="{{id}}" value="{{id}}"  name="id" onclick="displayLikes()" > . . .</a>
+
+  </form>
+
+      <form method="post" action="/delete">
+      <button class="btn btn-danger" style="float: right; margin-top:-30px" value="{{id}}"  name="id" type="submit">Delete</button>
+      </form>
 
 
 
+      <div class ="wholiked" value="{{id}}"   name="id" style="display: none">
+      <a style="color: #3498db"> {{likedby}} </a>
+    </div>
+
+</div>
+
+  </div>
+  </div>
+
+  {{/content}}
+
+<div id="signOut">
+  <form method="post" action="logout">
+    <input class="btn btn-warning" type="submit" value="SignOut">
+  </form>
+</div>
   </body>
 
   <script>
-  // function w3_open() {
-  //     document.getElementById("").style.display = "block";
-  // }
-  // function w3_close() {
-  //     document.getElementById("").style.display = "none";
-  // }
+
+
+var wholiked = document.querySelector('.wholiked');
+
+  function displayLikes() {
+
+  if(wholiked.style.display === 'none'){
+
+    wholiked.style.display = 'block'
+
+     }else{
+       wholiked.style.display = 'none'
+     }
+   }
+
+
   </script>
+
 
 </html>
