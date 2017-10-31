@@ -13,11 +13,6 @@ app.use(express.static(__dirname + '/views'));
 app.use(bodyParser.urlencoded({extended: false}));
 
 
-const port = process.env.PORT || 3000
-app.listen(port, function () {
-  console.log('Server is ON! Go to host:port:' + port)
-})
-
 app.use(session({
   secret: 'KeyBoardCat',
   resave: false,
@@ -39,5 +34,7 @@ app.use(register);
 
 
 
-app.listen(3000);
-console.log('Up and Running');
+const port = process.env.PORT || 3000
+app.listen(port, function () {
+  console.log('Server is ON! Go to host:port:' + port)
+})
