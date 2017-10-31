@@ -2,19 +2,22 @@
   "development": {
     "username": "mateenkazia",
     "password": "kazia1222",
-    "database": "mumbler",
+    "database": "mumble",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
     "username": "mateenkazia",
     "password": "kazia1222",
-    "database": "mumbler",
+    "database": "mumble",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
-   "use_env_variable": "DATABASE_URL",
-   "dialect": "postgres"
+    "username": "mateenkazia",
+    "password": "kazia1222",
+    "database": "mumble",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
   }
 }
