@@ -12,17 +12,6 @@ app.set('view engine', 'mustache');
 app.use(express.static(__dirname + '/views'));
 app.use(bodyParser.urlencoded({extended: false}));
 
-pg.defaults.ssl = true
-pg.connect(process.env.DATABASE_URL, function (err, client) {
-  if (err) throw err
-  console.log('Connected to postgres! Getting schemas...')
-
-  client
-    .query('SELECT table_schema,table_name FROM information_schema.tables;')
-    .on('row', function (row) {
-      console.log(JSON.stringify(row))
-    })
-})
 
 const port = process.env.PORT || 3000
 app.listen(port, function () {
