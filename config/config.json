@@ -1,22 +1,22 @@
 {
   "development": {
-    "username": "mateenkazia",
-    "password": "kazia1222",
-    "database": "mumble",
+    "username": "cristianherrera",
+    "password": "321Blast",
+    "database": "mumbler",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
-    "username": "mateenkazia",
-    "password": "kazia1222",
-    "database": "mumble",
+    "username": "cristianherrera",
+    "password": "321Blast",
+    "database": "mumbler",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
-    "username": "mateenkazia",
-    "password": "kazia1222",
-    "database": "mumble",
+    "username": "cristianherrera",
+    "password": "321Blast",
+    "database": "mumbler",
     "host": "127.0.0.1",
     "dialect": "postgres"
   }

@@ -1,16 +1,8 @@
 {
-  "name": "mumble",
+  "name": "mumbler-sql",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
-  "engines": {
-    "node": "8.1.4"
-  },
-  "scripts": {
-    "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "migrate": "node_modules/sequelize-cli/bin/sequelize db:migrate"
-  },
+  "license": "MIT",
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
@@ -18,8 +10,5 @@
     "mustache-express": "^1.2.5",
     "pg": "^7.3.0",
     "sequelize": "^4.15.1"
-  },
-  "repository": "https://github.com/MateenCode/Mumble-Project.git",
-  "author": "“mateen1222” <mateenkaziawebdev@gmail.com>",
-  "license": "MIT"
+  }
 }
